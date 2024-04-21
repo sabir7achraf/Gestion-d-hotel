@@ -1,6 +1,7 @@
 <?php
 include("includes/header.php");
 include("includes/navbar.php");
+// session_start() ; 
 ?>
                 <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -307,8 +308,8 @@ include("includes/navbar.php");
                             </div>
                         </div>
                     </div>
-                    <div col-auto id="welcome" >
-                        <grand><b>Welcome Mr RH Agent </b></grand>
+                    <div col-auto id="welcome" style="justify-content: center;display:flex;padding-top:180px;" >
+                        <grand style="text-align:center;font-size:70px;font-weight:bolder"><b>Welcome Mr RH Agent </b></grand>
                     </div>
                     
                         </div>
