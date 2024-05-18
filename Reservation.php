@@ -1,306 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Reservation</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
- <!-- Sidebar - Brand -->
- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-     <div class="sidebar-brand-icon rotate-n-15">
-
-     </div>
-     <div class="sidebar-brand-text mx-3">Finance Dashboard </div>
- </a>
- <!-- Divider -->
- <hr class="sidebar-divider my-0">
-
- <!-- Nav Item - Dashboard -->
- <li class="nav-item active">
-     <a class="nav-link" href="financePage.html">
-         <i class="fas fa-fw fa-tachometer-alt"></i>
-         <span>FinanceHome</span></a>
- </li>
-
- <!-- Divider -->
- <hr class="sidebar-divider">
-
- <!-- Heading -->
- <div class="sidebar-heading">
-     Revenue
- </div>
-
- <!-- Nav Item - Pages Collapse Menu -->
- <li class="nav-item">
-     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-         aria-expanded="true" aria-controls="collapseTwo">
-         <i class="fas fa-fw fa-cog"></i>
-         <span>departement</span>
-     </a>
-     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-         <div class="bg-white py-2 collapse-inner rounded">
-             <h6 class="collapse-header">Our Departement</h6>
-             <a class="collapse-item" href="Restauration.php">Restauration</a>
-             <a class="collapse-item" href="Reservation.php">Reservation</a>
-             <a class="collapse-item" href="service client.php">Services Client</a>
-         </div>
-     </div>
- </li>
-
- <!-- Nav Item - Utilities Collapse Menu -->
-
- <!-- Divider -->
- <hr class="sidebar-divider">
-
- <!-- Heading -->
- <div class="sidebar-heading">
-     Depences
- </div>
-
- <!-- Nav Item - Pages Collapse Menu -->
- <li class="nav-item">
-     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-         aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-fw fa-folder"></i>
-         <span>Les Charges</span>
-     </a>
-     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-         <div class="bg-white py-2 collapse-inner rounded">
-             <h6 class="collapse-header">departement charges:</h6>
-             <a class="collapse-item" href="stock.php">Stock</a>
-             <a class="collapse-item" href="payementclient.php">Resources humains</a>
-         </div>
-     </div>
- </li>
-
- <!-- Nav Item - Charts -->
- <li class="nav-item">
-     <a class="nav-link" href="rapport.php">
-         <i class="fas fa-fw fa-chart-area"></i>
-         <span>Rapport</span></a>
- </li>
-
-
-
-</ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                           
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Reservation</h1>
-                    <p class="mb-4">c'est un table qui represente les factures qui sont realiser par le departement Resrvation </p>
-
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Factures revenue</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>item</th>
-                                            <th>dscription</th>
-                                            <th>montant</th>
-                                            <th>date</th>
-                                            <th>facture</th>
-                                          
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>item</th>
-                                            <th>description</th>
-                                            <th>montant</th>
-                                            <th>date</th>
-                                            <th>facture</th>
-                                            
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                    <?php
-                                  
-                                    include('connectBDD.php');
-                                    $requete=$conn->prepare("SELECT * FROM facture where departement='Reservation'");
-                                    $requete->execute();
-                                    $resulta=$requete->fetchall(PDO::FETCH_ASSOC);
-                                    
-                        foreach ($resulta as $row){
-                        ?>
-                                        <tr>
-                                            <td><?php echo $row['item']?></td>
-                                            <td><?php echo $row['description']?></td>
-                                            <td><?php echo $row['montant']?></td>
-                                            <td><?php echo $row['date_achat']?></td>
-                                            <td><a href="Consultfacture.php?id=<?php echo $row['id']?>" class="btn btn-danger"> consulter</a></td>
-                                        </tr>
-                                        <?php
+<?php
+ try {
+    $conn = new PDO("mysql:host=localhost;dbname=hotel", 'root'); 
+    // Set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Connected successfully"; // Optional: Display a success message
+} catch (PDOException $e){
+    echo "Connection failed: " . $e->getMessage();
 }
-?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- End of Main Content -->
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-        </div>
-        
-        <!-- End of Content Wrapper -->
+// Vérifier si le formulaire a été soumis
+if (isset($_POST['submit'])) {
+    // Récupérer les données du formulaire
+    $date = $_POST['date'];
+    $chambre = $_POST['chambre'];
+    $personnes = $_POST['personnes'];
 
-    </div>
-    <!-- End of Page Wrapper -->
+    // Vérifier la validité des données
+    if (empty($date) || empty($chambre) || empty($personnes)) {
+        $error = "Veuillez remplir tous les champs.";
+    } else if (!in_array($chambre, ['single', 'double', 'triple'])) {
+        $error = "Type de chambre invalide.";
+    } else if (!in_array($personnes, [1, 2, 3])) {
+        $error = "Nombre de personnes invalide.";
+    } else {
+        // Vérifier la disponibilité de la chambre
+        $isAvailable = checkAvailability($date, $chambre, $personnes);
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+        if ($isAvailable) {
+            // Enregistrer la réservation
+            $reservationId = saveReservation($date, $chambre, $personnes);
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+            // Afficher le formulaire de réservation
+            echo "<h2>Formulaire de réservation</h2>";
+            echo "<form method='post' action='payment.php'>";
+            echo "<input type='hidden' name='reservationId' value='$reservationId'>";
+            echo "<label for='nom'>Nom:</label><br>";
+            echo "<input type='text' name='nom' id='nom' required><br>";
+            echo "<label for='prenom'>Prénom:</label><br>";
+            echo "<input type='text' name='prenom' id='prenom' required><br>";
+            echo "<label for='email'>Email:</label><br>";
+            echo "<input type='email' name='email' id='email' required><br>";
+            echo "<input type='submit' value='Valider la réservation'>";
+            echo "</form>";
+        } else {
+            // Afficher un message d'erreur
+            echo "<h2>Erreur</h2>";
+            echo "<p>La chambre n'est pas disponible à la date sélectionnée.</p>";
+        }
+    }
+} else {
+    // Afficher le formulaire de réservation
+    echo "<h2>Formulaire de réservation</h2>";
+    echo "<form method='post'>";
+    echo "<label for='date'>Date de réservation:</label><br>";
+    echo "<input type='date' name='date' id='date' required><br>";
+    echo "<label for='chambre'>Type de chambre:</label><br>";
+    echo "<select name='chambre' id='chambre' required>";
+    echo "<option value='single'>Single</option>";
+    echo "<option value='double'>Double</option>";
+    echo "<option value='triple'>Triple</option>";
+    echo "</select><br>";
+    echo "<label for='personnes'>Nombre de personnes:</label><br>";
+    echo "<select name='personnes' id='personnes' required>";
+    echo "<option value='1'>1</option>";
+    echo "<option value='2'>2</option>";
+    echo "<option value='3'>3</option>";
+    echo "</select><br>";
+    echo "<input type='submit' name='submit' value='Vérifier la disponibilité'>";
+    echo "</form>";
+}
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+// Fonction pour vérifier la disponibilité de la chambre
+function checkAvailability($date, $chambre, $personnes) {
+    // Code pour vérifier la disponibilité de la chambre dans la base de données
+    // ...
+    return true; // Remplacer par la valeur de disponibilité
+}
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+// Fonction pour enregistrer la réservation
+function saveReservation($date, $chambre, $personnes) {
+    // Code pour enregistrer la réservation dans la base de données
+    // ...
+    return 1; // Remplacer par l'identifiant de la réservation
+}
