@@ -92,8 +92,9 @@ include("includes/navbar.php");
             <?php
                 if(mysqli_num_rows($query_run) > 0)        
                         {
-                    while($row = mysqli_fetch_assoc($query_run))
+                    while($row = mysqli_fetch_assoc($query_run) )
                         {
+                            if( $row['statut'] != "Accepté" && $row['statut'] != "Refusé"  ){ 
             ?>
                 <tr>
                                 <td><?php  echo $row['id']; ?></td>
@@ -114,7 +115,8 @@ include("includes/navbar.php");
                                 </td>
                             </tr>
                         <?php
-                            } 
+                            }
+                        } 
                         }
                         else {
                             echo "No Record Found";

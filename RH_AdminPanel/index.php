@@ -1,6 +1,7 @@
 <?php
 include("includes/header.php");
 include("includes/navbar.php");
+include("dbconfig.php");
 // session_start() ; 
 ?>
                 <!-- Content Wrapper -->
@@ -18,7 +19,7 @@ include("includes/navbar.php");
         </button>
 
         <!-- Topbar Search -->
-        <form
+        <!-- <form
             class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -29,9 +30,9 @@ include("includes/navbar.php");
                     </button>
                 </div>
             </div>
-        </form>
+        </form> -->
 
-        <!-- Topbar Navbar -->
+        <!--Topbar Navbar-->
         <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -219,8 +220,8 @@ include("includes/navbar.php");
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
         </div>
         <!-- Content Row -->
         <div class="row">
@@ -233,7 +234,13 @@ include("includes/navbar.php");
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Number of Employees</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> 0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php
+                                            // $con = mysqli_connect('localhost','root','','f_g_club') ;
+                                                $query = "SELECT id FROM employe ORDER BY id";  
+                                                $query_run = mysqli_query($connection, $query);
+                                                $row = mysqli_num_rows($query_run);
+                                                echo '<h4> Total : '.$row.'</h4>';
+                                                ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -251,7 +258,13 @@ include("includes/navbar.php");
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Number of Rooms</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> 0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php
+                                            // $con = mysqli_connect('localhost','root','','f_g_club') ;
+                                                $query = "SELECT id FROM chambre ORDER BY id";  
+                                                $query_run = mysqli_query($connection, $query);
+                                                $row = mysqli_num_rows($query_run);
+                                                echo '<h4> Total : '.$row.'</h4>';
+                                                ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -298,7 +311,15 @@ include("includes/navbar.php");
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                     Number of Deppartments</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php
+                                            // $con = mysqli_connect('localhost','root','','f_g_club') ;
+                                                $query = "SELECT id FROM employe ORDER BY id";  
+                                                $query_run = mysqli_query($connection, $query);
+                                                $row = mysqli_num_rows($query_run);
+                                                echo '<h4> Total : '.$row.'</h4>';
+                                                ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>

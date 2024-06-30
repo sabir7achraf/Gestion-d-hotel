@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(resort.jpg);
+    background-position: center;
+    background-size: auto;
+}
+#form{
+    background-color: #000;
+    height:400px;
+    width:800px;
+    margin: auto;
+    margin-top: 100px;
+    opacity:0.7;
+}
+#first-group{
+    border:none;
+    width:400px;
+    margin-top: 38px;
+    position: absolute;
+}
+#content{
+    border: 1px solid #fff;
+    margin:10px;
+    margin-left: 8px;
+    padding:5px;
+}
+#content #input-group{
+    border:none;
+    outline:none;
+    background: transparent;
+    margin-left:8px;
+    width:300px;
+    color:#fff;
+}
+::placeholder{
+    color:#fff;
+}
+.fa{
+    display:inline-block;
+    color:red;
+    border-right:1px solid #fff;
+    padding:8px;
+    margin-left: 8px;
+}
+#second-group{
+    border:none;
+    width:400px;
+    margin-top: 55px;
+    margin-left:400px;
+}
+#submit-btn{
+    margin-top: 30px;
+    margin-left: 600px;
+    background: transparent;
+    color:#fff;
+    width:150px;
+    border:1px solid red;
+    outline:none;
+    padding:10px;
+    font-size: 20px;
+}
